@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import FlavourCard from "@/components/FlavourCard";
+import StoreLocator from "@/components/StoreLocator";
+import Newsletter from "@/components/Newsletter";
+import Testimonials from "@/components/Testimonials";
 import { Droplets, Leaf, Award, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-fresh.jpg";
@@ -188,6 +191,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Store Locator Section */}
+      <StoreLocator />
+
+      {/* Newsletter Section */}
+      <Newsletter />
     </div>
   );
 };

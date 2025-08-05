@@ -81,6 +81,15 @@ const Header = () => {
             >
               About
             </Link>
+            
+            <Link
+              to="/contact"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/contact") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -147,6 +156,14 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
 
               <Link to="/distributors">
