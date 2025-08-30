@@ -33,8 +33,8 @@ const Testimonials = () => {
       name: "Anjali Patel",
       location: "Bangalore, Karnataka",
       rating: 4,
-      text: "The Lychee flavour is exotic and refreshing. Fresh really knows how to capture the essence of natural fruits.",
-      flavour: "Lychee"
+      text: "The Lichi flavour is exotic and refreshing. Fresh really knows how to capture the essence of natural fruits.",
+      flavour: "Lichi"
     },
     {
       id: 4,

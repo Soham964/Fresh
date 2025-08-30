@@ -5,6 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Leaf, Droplets, Clock, Package, Users, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import nimbuImage from "@/assets/nimbu.jpg";
+import mangoBottle from "@/assets/mango-bottle.png";
+import orangeImage from "@/assets/orange.png";
+import pineappleImage from "@/assets/pineapple.png";
+import jeeraImage from "@/assets/jeera.jpg";
+import lichiImage from "@/assets/lichi.png";
 
 const FlavourDetail = () => {
   const { flavour } = useParams();
@@ -13,17 +19,16 @@ const FlavourDetail = () => {
     mango: {
       name: "Mango",
       color: "fresh-mango",
-      image: "https://images.unsplash.com/photo-1523130165979-4ac79c59fe6a?w=800&h=600&fit=crop",
-      description: "Rich and tropical mango flavor with authentic taste sourced from the finest Indian mangoes.",
-      longDescription: "Our Mango beverage is crafted using handpicked Alphonso mangoes from Maharashtra, known for their exceptional sweetness and aromatic quality. The drink delivers an authentic mango experience with a perfect balance of sweetness and natural fruit pulp.",
+      image: mangoBottle,
+      description: "Permitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      longDescription: "Contains:\nPermitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
       ingredients: [
-        "Alphonso Mango Pulp (25%)",
-        "Purified Water",
-        "Natural Sugar",
-        "Citric Acid",
-        "Natural Mango Flavor",
-        "Vitamin C",
-        "Beta Carotene"
+        "Acidity regulator (INS-330, INS-331)",
+        "Emulsifiers & Stabilizers (INS-414, INS-19)",
+        "Edible Vegetable Oils",
+        "Class II Preservatives (INS-211, INS-202)",
+        "Permitted Synthetic Food Colour(S) (INS-102, INS-110)",
+        "Added (Mango) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances)"
       ],
       nutritionPer100ml: {
         calories: 52,
@@ -50,17 +55,14 @@ const FlavourDetail = () => {
     jeera: {
       name: "Jeera",
       color: "fresh-jeera",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
-      description: "Traditional cumin-spiced refreshing drink that aids digestion and provides natural cooling.",
-      longDescription: "Our Jeera beverage is a traditional Indian drink made with roasted cumin seeds, known for its digestive properties and cooling effect. This refreshing drink is perfect for hot weather and aids in digestion while providing essential minerals.",
+      image: jeeraImage,
+      description: "Permitted natural and synthetic food colour(s) (INS-150D, INS-102, INS-110, INS-122, INS-133) and added (Masala Soda) flavour(s) (natural, nature identical and artificial flavouring substances)",
+      longDescription: "Contains:\nPermitted natural and synthetic food colour(s) (INS-150D, INS-102, INS-110, INS-122, INS-133) and added (Masala Soda) flavour(s) (natural, nature identical and artificial flavouring substances)",
       ingredients: [
-        "Roasted Cumin Powder",
-        "Purified Water",
-        "Rock Salt",
-        "Black Salt",
-        "Natural Mint Extract",
-        "Lemon Juice",
-        "Natural Spices"
+        "Salt",
+        "Acidity regulators (INS-330, INS-331)",
+        "Emulsifiers & stabilizers (INS-419, INS-445)",
+        "Class II preservatives (INS-211)"
       ],
       nutritionPer100ml: {
         calories: 18,
@@ -84,20 +86,16 @@ const FlavourDetail = () => {
         status: "Moderate Stock"
       }
     },
-    lychee: {
-      name: "Lychee",
-      color: "fresh-lychee",
-      image: "https://images.unsplash.com/photo-1619158884617-2ad5b6d8e9b2?w=800&h=600&fit=crop",
-      description: "Exotic and delicate lychee flavor with a perfect balance of sweetness and floral notes.",
-      longDescription: "Our Lychee beverage captures the exotic essence of this tropical fruit, known for its delicate floral aroma and sweet taste. Sourced from the best lychee orchards, this drink offers a unique and refreshing experience.",
+    lichi: {
+      name: "Lichi",
+      color: "fresh-lichi",
+      image: lichiImage,
+      description: "Added (LICHI) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances)",
+      longDescription: "Contains:\nAdded (LICHI) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances)",
       ingredients: [
-        "Lychee Fruit Concentrate (20%)",
-        "Purified Water",
-        "Natural Sugar",
-        "Citric Acid",
-        "Natural Lychee Flavor",
-        "Vitamin C",
-        "Natural Preservatives"
+        "Acidity Regulator (INS-330, INS-331)",
+        "Emulsifiers & Stabilizers (INS-414, INS-19)",
+        "Edible Oils, Class II Preservatives (INS-211, INS-202)"
       ],
       nutritionPer100ml: {
         calories: 45,
@@ -108,7 +106,7 @@ const FlavourDetail = () => {
         vitaminC: "18mg"
       },
       process: [
-        "Fresh lychee selection and peeling",
+        "Fresh lichi selection and peeling",
         "Juice extraction preserving natural essence",
         "Concentration process to intensify flavor",
         "Blending with purified water and vitamins",
@@ -124,17 +122,13 @@ const FlavourDetail = () => {
     pineapple: {
       name: "Pineapple",
       color: "fresh-pineapple",
-      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?w=800&h=600&fit=crop",
-      description: "Tangy and refreshing pineapple drink bursting with tropical sunshine and natural enzymes.",
-      longDescription: "Our Pineapple beverage delivers the perfect tropical experience with its tangy-sweet flavor profile. Rich in natural enzymes and vitamin C, this drink is both refreshing and nutritious, made from carefully selected pineapples.",
+      image: pineappleImage,
+      description: "Permitted Synthetic Food Colour(S) (INS-102) and Added (Pineapple) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      longDescription: "Contain:\nPermitted Synthetic Food Colour(S) (INS-102) and Added (Pineapple) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
       ingredients: [
-        "Pineapple Juice Concentrate (30%)",
-        "Purified Water",
-        "Natural Cane Sugar",
-        "Citric Acid",
-        "Natural Pineapple Flavor",
-        "Bromelain Enzyme",
-        "Vitamin C"
+        "Acidity Regulator (INS-330, INS-331)",
+        "Emulsifiers & Stabilizers (INS-419, INS-445)",
+        "Class II Preservatives (INS-211)"
       ],
       nutritionPer100ml: {
         calories: 48,
@@ -161,18 +155,14 @@ const FlavourDetail = () => {
     orange: {
       name: "Orange",
       color: "fresh-orange",
-      image: "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=800&h=600&fit=crop",
-      description: "Classic citrus burst with vitamin C from hand-picked oranges for a zesty experience.",
-      longDescription: "Our Orange beverage is made from premium Valencia oranges, delivering a classic citrus experience packed with natural vitamin C. The perfect balance of sweet and tangy makes it a timeless favorite for all ages.",
+      image: orangeImage,
+      description: "Permitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      longDescription: "Contain:\nPermitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
       ingredients: [
-        "Valencia Orange Juice (35%)",
-        "Purified Water",
-        "Natural Sugar",
-        "Orange Pulp",
-        "Citric Acid",
-        "Natural Orange Flavor",
-        "Vitamin C",
-        "Beta Carotene"
+        "Acidity Regulator (INS-330, INS-331)",
+        "Emulsifiers & Stabilizers (INS-414, INS-19)",
+        "Edible Vegetable Oils",
+        "Class II Preservatives (INS-211)"
       ],
       nutritionPer100ml: {
         calories: 47,
@@ -196,20 +186,18 @@ const FlavourDetail = () => {
         status: "High Stock"
       }
     },
-    lemon: {
-      name: "Lemon",
-      color: "fresh-lemon",
-      image: "https://images.unsplash.com/photo-1568485248653-233e4968c4fd?w=800&h=600&fit=crop",
-      description: "Crisp and invigorating lemon refresher perfect for hydration and natural detox.",
-      longDescription: "Our Lemon beverage is a crisp and invigorating drink made from freshly squeezed lemons. Known for its detoxifying properties and refreshing taste, it's the perfect choice for hydration and natural wellness.",
+  nimbu: {
+  name: "Nimbu",
+  color: "fresh-nimbu",
+  image: nimbuImage,
+      description: "Nimbu beverage crafted with premium ingredients: Acidity Regulator (INS-330, INS-297), Emulsifiers & Stabilizers (INS-414, INS-331), Edible Oils, Class II Preservatives (INS-211), Permitted Anti Caking Agent (INS-554), Added (Nimboo) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances).",
+      longDescription: "Our Nimbu beverage is made using a blend of high-quality ingredients and advanced food technology. It features Acidity Regulator (INS-330, INS-297), Emulsifiers & Stabilizers (INS-414, INS-331), Edible Oils, Class II Preservatives (INS-211), Permitted Anti Caking Agent (INS-554), and Added (Nimboo) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances) for a refreshing and authentic taste.",
       ingredients: [
-        "Fresh Lemon Juice (25%)",
-        "Purified Water",
-        "Natural Sugar",
-        "Lemon Zest Extract",
-        "Citric Acid",
-        "Natural Lemon Flavor",
-        "Electrolytes"
+        "Acidity Regulator (INS-330, INS-297)",
+        "Emulsifiers & Stabilizers (INS-414, INS-331)",
+        "Edible Oils, Class II Preservatives (INS-211)",
+        "Permitted Anti Caking Agent (INS-554)",
+        "Added (Nimboo) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances)"
       ],
       nutritionPer100ml: {
         calories: 28,
@@ -258,27 +246,15 @@ const FlavourDetail = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="relative h-96 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${data.image})` }}
-        />
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
-          style={{ 
-            background: `linear-gradient(135deg, hsl(var(--${data.color})) / 0.8, transparent)` 
-          }}
-        />
-        
-        <div className="relative z-10 h-full flex items-center">
-          <div className="container mx-auto px-4">
+      <section className="relative h-96 overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-lg" style={{ backgroundImage: `url(${data.image})`, transform: 'scale(1.2)' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" style={{ background: `linear-gradient(135deg, hsl(var(--${data.color})) / 0.8, transparent)` }} />
+        <div className="relative z-10 h-full flex items-center container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="max-w-2xl">
-              <Badge 
-                className="mb-4 text-white border-white/20"
-                style={{ backgroundColor: `hsl(var(--${data.color}))` }}
-              >
+              <Badge className="mb-4 text-white border-white/20" style={{ backgroundColor: `hsl(var(--${data.color}))` }}>
                 Fresh Natural Beverage
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -292,6 +268,33 @@ const FlavourDetail = () => {
                 Contact for Orders
               </Button>
             </div>
+            {/* Show bottle image for all flavours */}
+            {(flavour === "mango" || flavour === "nimbu" || flavour === "orange" || flavour === "pineapple" || flavour === "jeera" || flavour === "lichi") && (
+              <img 
+                src={data.image} 
+                alt={data.name + " Bottle"} 
+                className={`h-auto shadow-2xl ${
+                  flavour === "nimbu" || flavour === "pineapple"
+                    ? "w-32 rounded-[2rem] backdrop-blur-md border-2 border-white/20"
+                    : flavour === "jeera" || flavour === "lichi"
+                    ? "w-48 rounded-[2rem] backdrop-blur-md border-2 border-white/20" 
+                    : "w-48 rounded-xl"
+                }`}
+                style={
+                  flavour === "nimbu" || flavour === "pineapple" || flavour === "jeera"
+                    ? {
+                        boxShadow: "0 8px 32px 0 rgba(0,0,0,0.2)",
+                        filter: "drop-shadow(0 0 12px rgba(255,255,255,0.2))",
+                        background: "transparent",
+                        border: "1px solid rgba(255,255,255,0.1)"
+                      }
+                    : {
+                        boxShadow: "0 8px 32px 0 rgba(0,0,0,0.3)",
+                        background: "transparent"
+                      }
+                }
+              />
+            )}
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ const About = () => {
     { year: "2020", event: "Fresh brand conceptualized by Phoenix India R&D Group" },
     { year: "2021", event: "Partnership with Universe Water House for marketing and distribution" },
     { year: "2022", event: "Launch of first three flavours: Mango, Orange, and Lemon" },
-    { year: "2023", event: "Expansion with Jeera, Lychee, and Pineapple flavours" },
+    { year: "2023", event: "Expansion with Jeera, Lichi, and Pineapple flavours" },
     { year: "2024", event: "Nationwide distribution network established" }
   ];
 
@@ -130,7 +130,7 @@ const About = () => {
               
               <Card className="bg-gradient-card border-0 shadow-card-fresh">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-fresh-lychee rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-fresh-lichi rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <Leaf className="h-6 w-6 text-white" />
                   </div>
                   <h4 className="font-semibold mb-2">ISO</h4>

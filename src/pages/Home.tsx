@@ -7,50 +7,56 @@ import Testimonials from "@/components/Testimonials";
 import { Droplets, Leaf, Award, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-fresh.jpg";
+import nimbuImage from "@/assets/nimbu.jpg";
+import mangoBottle from "@/assets/mango-bottle.png";
+import orangeImage from "@/assets/orange.png";
+import pineappleImage from "@/assets/pineapple.png";
+import jeeraImage from "@/assets/jeera.jpg";
+import lichiImage from "@/assets/lichi.png";
 
 const Home = () => {
   const flavours = [
     {
       name: "Mango",
-      description: "Rich and tropical mango flavor with authentic taste sourced from the finest Indian mangoes.",
-      image: "https://images.unsplash.com/photo-1523130165979-4ac79c59fe6a?w=400&h=300&fit=crop",
+      description: "Permitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      image: mangoBottle,
       color: "fresh-mango",
       link: "/flavours/mango"
     },
     {
       name: "Jeera",
-      description: "Traditional cumin-spiced refreshing drink that aids digestion and provides natural cooling.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      description: "Permitted natural and synthetic food colour(s) (INS-150D, INS-102, INS-110, INS-122, INS-133) and added (Masala Soda) flavour(s) (natural, nature identical and artificial flavouring substances)",
+      image: jeeraImage,
       color: "fresh-jeera",
       link: "/flavours/jeera"
     },
     {
-      name: "Lychee",
-      description: "Exotic and delicate lychee flavor with a perfect balance of sweetness and floral notes.",
-      image: "https://images.unsplash.com/photo-1619158884617-2ad5b6d8e9b2?w=400&h=300&fit=crop",
-      color: "fresh-lychee",
-      link: "/flavours/lychee"
+      name: "Lichi",
+      description: "Added (LICHI) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances)",
+      image: lichiImage,
+      color: "fresh-lichi",
+      link: "/flavours/lichi"
     },
     {
       name: "Pineapple",
-      description: "Tangy and refreshing pineapple drink bursting with tropical sunshine and natural enzymes.",
-      image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&h=300&fit=crop",
+      description: "Permitted Synthetic Food Colour(S) (INS-102) and Added (Pineapple) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      image: pineappleImage,
       color: "fresh-pineapple",
       link: "/flavours/pineapple"
     },
     {
       name: "Orange",
-      description: "Classic citrus burst with vitamin C from hand-picked oranges for a zesty experience.",
-      image: "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&h=300&fit=crop",
+      description: "Permitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
+      image: orangeImage,
       color: "fresh-orange",
       link: "/flavours/orange"
     },
     {
-      name: "Lemon",
-      description: "Crisp and invigorating lemon refresher perfect for hydration and natural detox.",
-      image: "https://images.unsplash.com/photo-1568485248653-233e4968c4fd?w=400&h=300&fit=crop",
-      color: "fresh-lemon",
-      link: "/flavours/lemon"
+      name: "Nimbu",
+      description: "Nimbu beverage crafted with premium ingredients: Acidity Regulator (INS-330, INS-297), Emulsifiers & Stabilizers (INS-414, INS-331), Edible Oils, Class II Preservatives (INS-211), Permitted Anti Caking Agent (INS-554), Added (Nimboo) Flavour(S) (Natural, Nature Identical and Artificial Flavouring Substances).",
+      image: nimbuImage,
+      color: "fresh-nimbu",
+      link: "/flavours/nimbu"
     }
   ];
 

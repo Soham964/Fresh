@@ -51,7 +51,7 @@ const Distributors = () => {
     });
   };
 
-  const flavours = ["Mango", "Jeera", "Lychee", "Pineapple", "Orange", "Lemon"];
+  const flavours = ["Mango", "Jeera", "Lichi", "Pineapple", "Orange", "Lemon"];
 
   const handleFlavourChange = (flavour: string, checked: boolean) => {
     if (checked) {

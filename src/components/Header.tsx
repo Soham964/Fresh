@@ -10,10 +10,10 @@ const Header = () => {
   const flavours = [
     { name: "Mango", path: "/flavours/mango" },
     { name: "Jeera", path: "/flavours/jeera" },
-    { name: "Lychee", path: "/flavours/lychee" },
+    { name: "Lichi", path: "/flavours/lichi" },
     { name: "Pineapple", path: "/flavours/pineapple" },
     { name: "Orange", path: "/flavours/orange" },
-    { name: "Lemon", path: "/flavours/lemon" },
+    { name: "Nimbu", path: "/flavours/nimbu" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
