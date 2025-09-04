@@ -55,7 +55,7 @@ export default {
 				fresh: {
 					mango: 'hsl(var(--fresh-mango))',
 					jeera: 'hsl(var(--fresh-jeera))',
-					lychee: 'hsl(var(--fresh-lychee))',
+					lichi: 'hsl(var(--fresh-lichi))',
 					pineapple: 'hsl(var(--fresh-pineapple))',
 					orange: 'hsl(var(--fresh-orange))',
 					lemon: 'hsl(var(--fresh-lemon))'
