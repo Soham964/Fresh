@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
+import { submitContactForm } from "@/lib/api";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,15 +17,45 @@ const ContactForm = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting Fresh. We'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const response = await submitContactForm(formData);
+      
+      if (response.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for contacting Fresh. We'll get back to you within 24-48 hours.",
+        });
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        throw new Error(response.message || "Failed to send message");
+      }
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -107,8 +138,15 @@ const ContactForm = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="fresh" className="w-full">
-                  Send Message
+                <Button type="submit" variant="fresh" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </CardContent>
@@ -124,8 +162,7 @@ const ContactForm = () => {
                   <Mail className="h-6 w-6 text-primary mt-1" />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">info@freshbeverages.com</p>
-                    <p className="text-muted-foreground">support@freshbeverages.com</p>
+                    <p className="text-muted-foreground">theuniversewaterhouse@gmail.com</p>
                   </div>
                 </div>
                 
@@ -143,9 +180,9 @@ const ContactForm = () => {
                   <div>
                     <h4 className="font-semibold">Address</h4>
                     <p className="text-muted-foreground">
-                      Phoenix India Research & Development Group<br />
-                      123 Innovation Drive<br />
-                      New Delhi, 110001, India
+                      Phoenix India Research and Development Group<br />
+                      Head Office - 286 A.P.C Road<br />
+                      Kolkata - 700009
                     </p>
                   </div>
                 </div>

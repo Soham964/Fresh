@@ -113,8 +113,7 @@ const About = () => {
                   <div className="w-12 h-12 bg-fresh-orange rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="font-semibold mb-2">500+</h4>
-                  <p className="text-sm text-muted-foreground">Distribution partners</p>
+                  <p className="text-sm font-semibold text-foreground">Growing distribution network</p>
                 </CardContent>
               </Card>
               
@@ -123,8 +122,7 @@ const About = () => {
                   <div className="w-12 h-12 bg-fresh-lemon rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <Award className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="font-semibold mb-2">100%</h4>
-                  <p className="text-sm text-muted-foreground">Natural ingredients</p>
+                  <p className="text-sm font-semibold text-foreground">Premium ingredients</p>
                 </CardContent>
               </Card>
               
@@ -133,8 +131,8 @@ const About = () => {
                   <div className="w-12 h-12 bg-fresh-lichi rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <Leaf className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="font-semibold mb-2">ISO</h4>
-                  <p className="text-sm text-muted-foreground">Certified quality</p>
+                  <h4 className="font-semibold mb-2">FSSAI</h4>
+                  <p className="text-sm font-semibold text-foreground">Registered company</p>
                 </CardContent>
               </Card>
             </div>
@@ -206,18 +204,7 @@ const About = () => {
                       </p>
                     </CardContent>
                   </div>
-                  
-                  <div className="bg-secondary/50 p-6">
-                    <h4 className="font-semibold text-foreground mb-4">Key Achievements</h4>
-                    <ul className="space-y-3">
-                      {company.achievements.map((achievement, achievementIndex) => (
-                        <li key={achievementIndex} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+
                 </div>
               </Card>
             ))}

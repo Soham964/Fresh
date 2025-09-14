@@ -166,8 +166,7 @@ const Distributors = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">distributors@fresh-beverages.com</p>
-                    <p className="text-muted-foreground">partnerships@universewaterhouse.com</p>
+                    <p className="text-muted-foreground">theuniversewaterhouse@gmail.com</p>
                   </div>
                 </div>
 
@@ -178,9 +177,9 @@ const Distributors = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Address</h3>
                     <p className="text-muted-foreground">
-                      Phoenix India Research & Development Group<br />
-                      Sector 18, Noida, Uttar Pradesh - 201301<br />
-                      India
+                      Phoenix India Research and Development Group<br />
+                      Head Office - 286 A.P.C Road<br />
+                      Kolkata - 700009
                     </p>
                   </div>
                 </div>

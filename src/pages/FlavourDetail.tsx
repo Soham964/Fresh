@@ -371,57 +371,9 @@ const FlavourDetail = () => {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            {/* Nutrition Facts */}
-            <Card className="bg-gradient-card border-0 shadow-card-fresh">
-              <CardHeader>
-                <CardTitle className="text-lg">Nutrition Facts</CardTitle>
-                <p className="text-sm text-muted-foreground">Per 100ml serving</p>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {Object.entries(data.nutritionPer100ml).map(([key, value]) => (
-                  <div key={key} className="flex justify-between items-center py-2 border-b border-border/50 last:border-0">
-                    <span className="text-sm capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                    <span className="font-medium">{String(value)}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
 
-            {/* Inventory Status */}
-            <Card className="bg-gradient-card border-0 shadow-card-fresh">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Package className="h-5 w-5 text-primary" />
-                  Current Inventory
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Status</span>
-                  <Badge 
-                    variant="outline"
-                    className={`${getInventoryColor()} text-white border-0`}
-                  >
-                    {data.inventory.status}
-                  </Badge>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Current Stock</span>
-                    <span className="font-medium">{data.inventory.current.toLocaleString()} units</span>
-                  </div>
-                  <Progress 
-                    value={inventoryPercentage} 
-                    className="h-2"
-                  />
-                  <div className="flex justify-between text-xs text-muted-foreground">
-                    <span>0</span>
-                    <span>Target: {data.inventory.target.toLocaleString()}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+
+
 
             {/* Contact for Orders */}
             <Card className="bg-gradient-fresh text-white border-0">

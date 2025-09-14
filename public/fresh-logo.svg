@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#6B8E23"/>
+  
+  <!-- Bubbles -->
+  <circle cx="280" cy="200" r="8" fill="white" opacity="0.8"/>
+  <circle cx="300" cy="180" r="4" fill="white" opacity="0.6"/>
+  <circle cx="350" cy="195" r="25" fill="white" opacity="0.9"/>
+  <circle cx="380" cy="210" r="15" fill="white" opacity="0.7"/>
+  <circle cx="420" cy="190" r="10" fill="white" opacity="0.8"/>
+  <circle cx="250" cy="250" r="6" fill="white" opacity="0.6"/>
+  <circle cx="270" cy="240" r="4" fill="white" opacity="0.5"/>
+  <circle cx="220" cy="300" r="20" fill="white" opacity="0.8"/>
+  <circle cx="620" cy="280" r="12" fill="white" opacity="0.7"/>
+  <circle cx="640" cy="300" r="8" fill="white" opacity="0.6"/>
+  <circle cx="600" cy="320" r="6" fill="white" opacity="0.5"/>
+  <circle cx="580" cy="450" r="4" fill="white" opacity="0.4"/>
+  <circle cx="600" cy="470" r="8" fill="white" opacity="0.6"/>
+  <circle cx="620" cy="490" r="6" fill="white" opacity="0.5"/>
+  
+  <!-- Main lime slice -->
+  <circle cx="400" cy="400" r="120" fill="#32CD32" stroke="#228B22" stroke-width="8"/>
+  <circle cx="400" cy="400" r="110" fill="#9AFF9A" opacity="0.3"/>
+  
+  <!-- Lime segments -->
+  <path d="M 400 290 L 400 400 L 480 360 Z" fill="#ADFF2F"/>
+  <path d="M 400 290 L 400 400 L 320 360 Z" fill="#ADFF2F"/>
+  <path d="M 400 510 L 400 400 L 480 440 Z" fill="#ADFF2F"/>
+  <path d="M 400 510 L 400 400 L 320 440 Z" fill="#ADFF2F"/>
+  <path d="M 290 400 L 400 400 L 360 320 Z" fill="#ADFF2F"/>
+  <path d="M 290 400 L 400 400 L 360 480 Z" fill="#ADFF2F"/>
+  <path d="M 510 400 L 400 400 L 440 320 Z" fill="#ADFF2F"/>
+  <path d="M 510 400 L 400 400 L 440 480 Z" fill="#ADFF2F"/>
+  
+  <!-- Segment lines -->
+  <line x1="400" y1="290" x2="400" y2="510" stroke="white" stroke-width="3"/>
+  <line x1="290" y1="400" x2="510" y2="400" stroke="white" stroke-width="3"/>
+  <line x1="320" y1="320" x2="480" y2="480" stroke="white" stroke-width="3"/>
+  <line x1="480" y1="320" x2="320" y2="480" stroke="white" stroke-width="3"/>
+  
+  <!-- Orange slice -->
+  <circle cx="520" cy="280" r="60" fill="#FFA500" stroke="#FF8C00" stroke-width="4"/>
+  <circle cx="520" cy="280" r="55" fill="#FFD700" opacity="0.4"/>
+  
+  <!-- Orange segments -->
+  <path d="M 520 220 L 520 280 L 560 250 Z" fill="#FFD700"/>
+  <path d="M 520 220 L 520 280 L 480 250 Z" fill="#FFD700"/>
+  <path d="M 520 340 L 520 280 L 560 310 Z" fill="#FFD700"/>
+  <path d="M 520 340 L 520 280 L 480 310 Z" fill="#FFD700"/>
+  <path d="M 460 280 L 520 280 L 490 240 Z" fill="#FFD700"/>
+  <path d="M 460 280 L 520 280 L 490 320 Z" fill="#FFD700"/>
+  <path d="M 580 280 L 520 280 L 550 240 Z" fill="#FFD700"/>
+  <path d="M 580 280 L 520 280 L 550 320 Z" fill="#FFD700"/>
+  
+  <!-- Orange segment lines -->
+  <line x1="520" y1="220" x2="520" y2="340" stroke="white" stroke-width="2"/>
+  <line x1="460" y1="280" x2="580" y2="280" stroke="white" stroke-width="2"/>
+  <line x1="480" y1="240" x2="560" y2="320" stroke="white" stroke-width="2"/>
+  <line x1="560" y1="240" x2="480" y2="320" stroke="white" stroke-width="2"/>
+  
+  <!-- Small lime slice -->
+  <circle cx="180" cy="480" r="45" fill="#32CD32" stroke="#228B22" stroke-width="3"/>
+  <circle cx="180" cy="480" r="40" fill="#9AFF9A" opacity="0.3"/>
+  
+  <!-- Small lime segments -->
+  <path d="M 180 435 L 180 480 L 210 460 Z" fill="#ADFF2F"/>
+  <path d="M 180 435 L 180 480 L 150 460 Z" fill="#ADFF2F"/>
+  <path d="M 180 525 L 180 480 L 210 500 Z" fill="#ADFF2F"/>
+  <path d="M 180 525 L 180 480 L 150 500 Z" fill="#ADFF2F"/>
+  <path d="M 135 480 L 180 480 L 160 450 Z" fill="#ADFF2F"/>
+  <path d="M 135 480 L 180 480 L 160 510 Z" fill="#ADFF2F"/>
+  <path d="M 225 480 L 180 480 L 200 450 Z" fill="#ADFF2F"/>
+  <path d="M 225 480 L 180 480 L 200 510 Z" fill="#ADFF2F"/>
+  
+  <!-- Small lime segment lines -->
+  <line x1="180" y1="435" x2="180" y2="525" stroke="white" stroke-width="2"/>
+  <line x1="135" y1="480" x2="225" y2="480" stroke="white" stroke-width="2"/>
+  <line x1="150" y1="450" x2="210" y2="510" stroke="white" stroke-width="2"/>
+  <line x1="210" y1="450" x2="150" y2="510" stroke="white" stroke-width="2"/>
+  
+  <!-- Text background -->
+  <rect x="200" y="350" width="400" height="100" fill="#2F4F2F" rx="10"/>
+  
+  <!-- FRESH text -->
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">FRESH</text>
+  
+  <!-- Small bubbles around text -->
+  <circle cx="420" cy="270" r="3" fill="white" opacity="0.6"/>
+  <circle cx="440" cy="285" r="5" fill="white" opacity="0.8"/>
+  <circle cx="460" cy="275" r="2" fill="white" opacity="0.5"/>
+  <circle cx="600" cy="380" r="4" fill="white" opacity="0.7"/>
+  <circle cx="620" cy="400" r="6" fill="white" opacity="0.8"/>
+  <circle cx="640" cy="420" r="3" fill="white" opacity="0.6"/>
+</svg>

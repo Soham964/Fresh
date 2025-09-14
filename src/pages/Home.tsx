@@ -4,8 +4,10 @@ import FlavourCard from "@/components/FlavourCard";
 import StoreLocator from "@/components/StoreLocator";
 import Newsletter from "@/components/Newsletter";
 import Testimonials from "@/components/Testimonials";
-import { Droplets, Leaf, Award, Users } from "lucide-react";
+import { Droplets, Leaf, Award, Users, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useProducts } from "@/hooks/useProducts";
+import { getProductDisplayData } from "@/lib/productMapping";
 import heroImage from "@/assets/hero-fresh.jpg";
 import nimbuImage from "@/assets/nimbu.jpg";
 import mangoBottle from "@/assets/mango-bottle.png";
@@ -15,7 +17,10 @@ import jeeraImage from "@/assets/jeera.jpg";
 import lichiImage from "@/assets/lichi.png";
 
 const Home = () => {
-  const flavours = [
+  const { data: productsData, isLoading: productsLoading, error: productsError } = useProducts();
+  
+  // Fallback flavours for when API is not available
+  const fallbackFlavours = [
     {
       name: "Mango",
       description: "Permitted Synthetic Food Colour(S) (INS-102, INS-124) and Added (Orange) Flavour(S) (Natural, Nature Indentical and Artificial Flavouring Substances)",
@@ -59,6 +64,23 @@ const Home = () => {
       link: "/flavours/nimbu"
     }
   ];
+
+  // Transform API products to flavour format
+  const apiProducts = productsData?.products?.map(product => {
+    const displayData = getProductDisplayData(product.slug, product.name);
+    return {
+      name: product.name,
+      description: product.short_description,
+      image: displayData.image,
+      color: displayData.color,
+      link: `/flavours/${product.slug}`,
+      price: product.price,
+      inStock: product.is_in_stock,
+    };
+  }) || [];
+
+  // Use API products if available, otherwise fallback
+  const flavours = apiProducts.length > 0 ? apiProducts : fallbackFlavours;
 
   const features = [
     {
@@ -155,13 +177,25 @@ const Home = () => {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Explore our diverse range of natural fruit beverages, each crafted with unique ingredients and traditional recipes.
             </p>
+            {productsError && (
+              <p className="text-amber-600 text-sm mt-2">
+                ⚠️ Using offline data - API connection unavailable
+              </p>
+            )}
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {flavours.map((flavour, index) => (
-              <FlavourCard key={index} {...flavour} />
-            ))}
-          </div>
+          {productsLoading ? (
+            <div className="flex justify-center items-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+              <span className="ml-2 text-muted-foreground">Loading fresh flavours...</span>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {flavours.map((flavour, index) => (
+                <FlavourCard key={flavour.name || index} {...flavour} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

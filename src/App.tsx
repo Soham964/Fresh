@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import FlavourDetail from "./pages/FlavourDetail";
 import Distributors from "./pages/Distributors";
+import ProductDetails from "./pages/ProductDetails";
+import ProfitMarginsDetail from "./pages/ProfitMarginsDetail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/flavours/:flavour" element={<FlavourDetail />} />
           <Route path="/distributors" element={<Distributors />} />
+          <Route path="/product-details" element={<ProductDetails />} />
+          <Route path="/profit-margins" element={<ProfitMarginsDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
