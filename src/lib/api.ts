@@ -152,11 +152,9 @@ export interface ProductsParams {
 // Create and export API instance
 export const api = new ApiService(API_BASE_URL);
 
-// Export individual functions for convenience
-export const {
-  submitContactForm,
-  getProducts,
-  getProduct,
-  getCategories,
-  getFeaturedProducts,
-} = api;
+// Export individual functions for convenience - bind them to maintain context
+export const submitContactForm = api.submitContactForm.bind(api);
+export const getProducts = api.getProducts.bind(api);
+export const getProduct = api.getProduct.bind(api);
+export const getCategories = api.getCategories.bind(api);
+export const getFeaturedProducts = api.getFeaturedProducts.bind(api);
