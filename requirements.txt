@@ -7,3 +7,4 @@ Pillow==11.3.0
 django-filter==25.1
 gunicorn==23.0.0
 whitenoise==6.7.0
+dj-database-url==2.1.0
