@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Beverages API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        .status {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .endpoints {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .endpoint-group {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .endpoint-group h3 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        .endpoint {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .endpoint a {
+            color: #87CEEB;
+            text-decoration: none;
+            font-family: monospace;
+        }
+        .endpoint a:hover {
+            text-decoration: underline;
+        }
+        .method {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .get { background: #4CAF50; }
+        .post { background: #FF9800; }
+        .admin-info {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥤 Fresh Beverages API</h1>
+        <p class="subtitle">Natural & Refreshing Beverage Management System</p>
+        
+        <div class="status">
+            <strong>✅ Server Status: RUNNING</strong><br>
+            Django Backend API v1.0 - Development Server
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div>Products</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div>Categories</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div>Featured</div>
+            </div>
+        </div>
+
+        <div class="endpoints">
+            <div class="endpoint-group">
+                <h3>🛍️ Products API</h3>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/api/products/" target="_blank">/api/products/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">List all products</div>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/api/products/categories/" target="_blank">/api/products/categories/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">List categories</div>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/api/products/featured/" target="_blank">/api/products/featured/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Featured products</div>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/api/products/orange-fresh/" target="_blank">/api/products/orange-fresh/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Product details (example)</div>
+                </div>
+            </div>
+
+            <div class="endpoint-group">
+                <h3>📧 Contact API</h3>
+                <div class="endpoint">
+                    <span class="method post">POST</span>
+                    <span style="font-family: monospace; color: #87CEEB;">/api/contact/submit/</span>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Submit contact form</div>
+                </div>
+            </div>
+
+            <div class="endpoint-group">
+                <h3>⚙️ Admin & Tools</h3>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/admin/" target="_blank">/admin/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">Django admin panel</div>
+                </div>
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <a href="/api/" target="_blank">/api/</a>
+                    <div style="font-size: 0.9em; opacity: 0.8; margin-top: 5px;">API root (JSON)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-info">
+            <h3>🔑 Admin Access</h3>
+            <p><strong>Username:</strong> <code>temp_admin</code></p>
+            <p><strong>Password:</strong> <code>temp123456</code></p>
+            <p style="font-size: 0.9em; opacity: 0.8;">Use these credentials to access the Django admin panel</p>
+        </div>
+    </div>
+</body>
+</html>
